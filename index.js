@@ -79,6 +79,7 @@ module.exports = {
     'jsx-a11y/anchor-has-content': 0,
     'react/forbid-prop-types': 0,
     'react/no-children-prop': 0,
+    'react/no-array-index-key': 0,
     'react/no-multi-comp': 0,
     'react/no-unused-prop-types': 0, // false positives
     'react/jsx-filename-extension': 0,
