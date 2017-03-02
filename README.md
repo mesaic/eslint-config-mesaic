@@ -1,9 +1,14 @@
 # eslint-config-mesaic
 ESLint config used at mesaic. Extracted so we can use it in multiple repos.
 
-**Note:** Yarn has a [bug]() that disallows using private git repos as dependencies. A current workaround is to add the following to your `~/.ssh/config`: 
+Add this to your package:
 
 ```
-Host github.com
-        User git
+{
+  ...
+  dependencies: {
+    "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#master"
+  }
+}
+
 ```
