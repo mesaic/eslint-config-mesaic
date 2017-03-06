@@ -77,6 +77,7 @@ module.exports = {
     'quotes': ['error', 'single', 'avoid-escape'],
     'require-yield': 0, // false positives
     'jsx-a11y/anchor-has-content': 0,
+    'react/require-default-props': 0,
     'react/forbid-prop-types': 0,
     'react/no-children-prop': 0,
     'react/no-array-index-key': 0,
