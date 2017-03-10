@@ -44,7 +44,7 @@ module.exports = {
   rules: {
     'arrow-body-style': 0,
     'arrow-parens': [2, 'always'],
-    'babel/object-curly-spacing': 2,
+    'object-curly-spacing': ['error', 'never'],
     'object-shorthand': 2,
     'block-scoped-var': 0,
     'id-length': 0,
@@ -70,7 +70,6 @@ module.exports = {
     'no-use-before-define': 0,
     'no-prototype-builtins': 0,
 
-    'object-curly-spacing': 0,
     'one-var': 0,
     'prefer-arrow-callback': 2,
     'prefer-template': 0,
