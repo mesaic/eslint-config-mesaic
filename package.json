@@ -28,6 +28,6 @@
   "peerDependencies": {
     "eslint": "*",
     "eslint_d": "*",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.1.1"
   }
 }
