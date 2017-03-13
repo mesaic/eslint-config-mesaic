@@ -3,7 +3,7 @@
  */
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['babel', 'mocha', 'flowtype'],
+  plugins: ['babel', 'mocha', 'flowtype', 'react'],
   rules: {
     'arrow-parens': [2, 'always'],
     'jsx-quotes': [2, 'prefer-single'],
