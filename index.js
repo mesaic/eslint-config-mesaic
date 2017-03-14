@@ -64,6 +64,7 @@ module.exports = {
     'no-unused-expressions': 0,
 
     'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/label-has-for': 0,
 
     // temporary disable until https://github.com/Intellicode/eslint-plugin-react-native/issues/22 lands
     // putting Stylesheets at the bottom is best practice in react native, so there should be an exception for this case
