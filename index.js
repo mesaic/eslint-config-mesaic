@@ -44,9 +44,9 @@ module.exports = {
   rules: {
     'arrow-body-style': 0,
     'arrow-parens': [2, 'always'],
-    'object-curly-spacing': ['error', 'never'],
-    'object-shorthand': 2,
     'block-scoped-var': 0,
+    'generator-star-spacing': 0, // has bug, disable for now
+    'guard-for-in': 0,
     'id-length': 0,
     'jsx-quotes': [2, 'prefer-single'],
     'max-len': 0,
@@ -60,64 +60,62 @@ module.exports = {
     'no-nested-ternary': 0,
     'no-param-reassign': ['error', {props: false}],
     'no-plusplus': 0,
+    'no-prototype-builtins': 0,
+    'no-restricted-syntax': 0,
     'no-underscore-dangle': 0,
     'no-unused-expressions': 0,
-
-    'jsx-a11y/no-static-element-interactions': 0,
-    'jsx-a11y/label-has-for': 0,
-    'jsx-a11y/img-has-alt': 0,
-
-    // temporary disable until https://github.com/Intellicode/eslint-plugin-react-native/issues/22 lands
-    // putting Stylesheets at the bottom is best practice in react native, so there should be an exception for this case
-    'no-use-before-define': 0,
-    'no-prototype-builtins': 0,
-
+    'no-use-before-define': 0, // putting Stylesheets at the bottom is best practice in react native, so there should be an exception for this case; temporary disable until https://github.com/Intellicode/eslint-plugin-react-native/issues/22 lands
+    'object-curly-spacing': ['error', 'never'],
+    'object-shorthand': 2,
     'one-var': 0,
     'prefer-arrow-callback': 2,
     'prefer-template': 0,
     'quotes': ['error', 'single', 'avoid-escape'],
     'require-yield': 0, // false positives
-    'jsx-a11y/anchor-has-content': 0,
-    'react/require-default-props': 0,
-    'react/forbid-prop-types': 0,
-    'react/no-children-prop': 0,
-    'react/no-array-index-key': 0,
-    'react/no-multi-comp': 0,
-    'react/no-unused-prop-types': 0, // false positives
-    'react/jsx-filename-extension': 0,
-    'react/jsx-closing-bracket-location': [2, {selfClosing: 'after-props', nonEmpty: 'after-props'}],
-    'react/jsx-curly-spacing': [2, 'never'],
-    'react/jsx-indent-props': [2, 2],
-    'react/jsx-max-props-per-line': 0,
-    'react/no-danger': 0,
-    'react/prefer-stateless-function': 0,
-    'react/prop-types': 0,
-    'react/sort-comp': [2, reactSortCompConfig],
-    'react/wrap-multilines': 0,
-    'react/jsx-no-bind': 0,
     'space-before-function-paren': ['error', 'never'],
     'spaced-comment': 0,
     'vars-on-top': 0,
+
+    // jsx-a11y
+    'jsx-a11y/anchor-has-content': 0,
+    'jsx-a11y/img-has-alt': 0,
+    'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+
+    // react
+    'react/forbid-prop-types': 0,
+    'react/jsx-closing-bracket-location': [2, {selfClosing: 'after-props', nonEmpty: 'after-props'}],
+    'react/jsx-curly-spacing': [2, 'never'],
+    'react/jsx-filename-extension': 0,
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-max-props-per-line': 0,
+    'react/jsx-no-bind': 0,
+    'react/no-array-index-key': 0,
+    'react/no-children-prop': 0,
+    'react/no-danger': 0,
+    'react/no-multi-comp': 0,
+    'react/no-unused-prop-types': 0, // false positives
+    'react/prefer-stateless-function': 0,
+    'react/prop-types': 0,
+    'react/require-default-props': 0,
+    'react/sort-comp': [2, reactSortCompConfig],
+    'react/wrap-multilines': 0,
+    
+    // import
     'import/extensions': 0,
-    'import/prefer-default-export': 0, // has false positives
-    'import/no-named-as-default': 0, // has false positives
-    'import/no-extraneous-dependencies': 0,
-    'import/order': [2, {
-      'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      // 'newlines-between': 'always',
-    }],
     'import/imports-first': 2,
     'import/no-duplicates': 2,
-    'import/no-unresolved': [2, {
-      ignore: [
-        // this would warn for react-native imports in packages/, as the package is only used in partner/ right now
-        'react-native',
-      ],
-    }],
+    'import/no-extraneous-dependencies': 0,
+    'import/no-named-as-default': 0, // has false positives
+    'import/no-unresolved': [2, { ignore: [ /* this would warn for react-native imports in packages/, as the package is only used in partner/ right now */ 'react-native', ], }],
+    'import/order': [2, { 'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
+    'import/prefer-default-export': 0, // has false positives
 
+    // mocha
     'mocha/no-exclusive-tests': 'error',
     'mocha/no-skipped-tests': 'error',
 
+    // flowtype
     'flowtype/define-flow-type': 2,
     'flowtype/require-parameter-type': [2, {excludeArrowFunctions: 'expressionsOnly'}],
     'flowtype/require-return-type': [2, 'always', {excludeArrowFunctions: 'expressionsOnly', annotateUndefined: 'always'}],
@@ -127,9 +125,6 @@ module.exports = {
     'flowtype/type-id-match': [2, '^T([A-Z][a-z0-9]*)+$'],
     'flowtype/use-flow-type': 2,
     'flowtype/valid-syntax': 2,
-
-    // has bug, disable for now
-    'generator-star-spacing': 0,
   },
   settings: {
     'flowtype': {
