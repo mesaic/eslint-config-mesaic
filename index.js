@@ -62,6 +62,7 @@ module.exports = {
     'no-plusplus': 0,
     'no-prototype-builtins': 0,
     'no-restricted-syntax': 0,
+    'no-return-await': 0, // programmer should decide whether the redundant `await` makes the code easier to understand
     'no-underscore-dangle': 0,
     'no-unused-expressions': 0,
     'no-use-before-define': 0, // putting Stylesheets at the bottom is best practice in react native, so there should be an exception for this case; temporary disable until https://github.com/Intellicode/eslint-plugin-react-native/issues/22 lands
