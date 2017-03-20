@@ -72,6 +72,7 @@ module.exports = {
     'prefer-arrow-callback': 2,
     'prefer-template': 0,
     'quotes': ['error', 'single', 'avoid-escape'],
+    'require-await': 'error',
     'require-yield': 0, // false positives
     'space-before-function-paren': ['error', 'never'],
     'spaced-comment': 0,
