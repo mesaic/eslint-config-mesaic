@@ -14,6 +14,8 @@
     "no-restricted-syntax": 0,
     "no-await-in-loop": 0,
     "no-unused-vars": 0,
+    "no-useless-concat": 0,
+    "no-continue": 0,
     "camelcase": 0
   },
   "globals": {
