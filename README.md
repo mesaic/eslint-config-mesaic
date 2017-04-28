@@ -7,7 +7,7 @@ Add this to your package:
 {
   ...
   dependencies: {
-    "eslint-config-mesaic": "git+ssh://git@github.com/wish-technology/eslint-config-mesaic.git#master"
+    "eslint-config-mesaic": "git+ssh://git@github.com/mesaic/eslint-config-mesaic.git#master"
   }
 }
 
