@@ -142,7 +142,6 @@ module.exports = {
           '.server.js',
           '',
           '.less',
-          '.less.module',
           '.css',
           '.svg',
         ],
