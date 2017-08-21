@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-mesaic",
-  "version": "1.0.0",
+  "name": "@mesaic/eslint-config-mesaic",
+  "version": "0.0.0",
   "main": "index.js",
   "scripts": {},
   "repository": {
@@ -29,5 +29,8 @@
     "eslint": "*",
     "eslint_d": "*",
     "babel-eslint": "^7.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
