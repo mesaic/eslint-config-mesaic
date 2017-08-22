@@ -1,6 +1,6 @@
 {
   "name": "@mesaic/eslint-config-mesaic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "scripts": {},
   "repository": {
