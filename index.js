@@ -151,7 +151,7 @@ module.exports = {
         ],
         paths: [
           // Only allow absolute from repo root
-          path.resolve(__dirname, '../../'),
+          path.resolve(__dirname, '../../../'),
         ],
       },
     },
