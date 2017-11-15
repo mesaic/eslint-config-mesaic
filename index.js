@@ -103,7 +103,7 @@ module.exports = {
     'react/require-default-props': 0,
     'react/sort-comp': [2, reactSortCompConfig],
     'react/wrap-multilines': 0,
-    
+
     // import
     'import/extensions': 0,
     'import/imports-first': 2,
@@ -134,7 +134,10 @@ module.exports = {
       onlyFilesWithFlowAnnotation: false,
     },
     'import/resolver': {
-      node: {
+      [require.resolve('./import-resolver.js')]: {
+        alias: {
+          'api': 'api/src',
+        },
         extensions: [
           '.js',
           '.native.js',
@@ -148,6 +151,7 @@ module.exports = {
         moduleDirectory: [
           'node_modules',
           'packages',
+          'services',
         ],
         paths: [
           // Only allow absolute from repo root
