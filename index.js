@@ -137,6 +137,7 @@ module.exports = {
       [require.resolve('./import-resolver.js')]: {
         alias: {
           'api': 'api/src',
+          'e2e': 'e2e/src',
         },
         extensions: [
           '.js',
@@ -152,6 +153,7 @@ module.exports = {
           'node_modules',
           'packages',
           'services',
+          'tests',
         ],
         paths: [
           // Only allow absolute from repo root
