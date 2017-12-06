@@ -10,8 +10,8 @@ var reactSortCompConfig = {
     '/^_handle.+$/',
     'everything-else',
   ],
-  'groups': {
-    'lifecycle': [
+  groups: {
+    lifecycle: [
       'displayName',
       'props',
       'propTypes',
@@ -72,7 +72,7 @@ module.exports = {
     'one-var': 0,
     'prefer-arrow-callback': 2,
     'prefer-template': 0,
-    'quotes': ['error', 'single', 'avoid-escape'],
+    quotes: ['error', 'single', 'avoid-escape'],
     'require-await': 'error',
     'require-yield': 0, // false positives
     'space-before-function-paren': ['error', 'never'],
@@ -87,7 +87,10 @@ module.exports = {
 
     // react
     'react/forbid-prop-types': 0,
-    'react/jsx-closing-bracket-location': [2, {selfClosing: 'after-props', nonEmpty: 'after-props'}],
+    'react/jsx-closing-bracket-location': [
+      2,
+      {selfClosing: 'after-props', nonEmpty: 'after-props'},
+    ],
     'react/jsx-curly-spacing': [2, 'never'],
     'react/jsx-filename-extension': 0,
     'react/jsx-indent-props': [2, 2],
@@ -110,8 +113,18 @@ module.exports = {
     'import/no-duplicates': 2,
     'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0, // has false positives
-    'import/no-unresolved': [2, { ignore: [ /* this would warn for react-native imports in packages/, as the package is only used in partner/ right now */ 'react-native', ], }],
-    'import/order': [2, { 'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
+    'import/no-unresolved': [
+      2,
+      {
+        ignore: [
+          /* this would warn for react-native imports in packages/, as the package is only used in partner/ right now */ 'react-native',
+        ],
+      },
+    ],
+    'import/order': [
+      2,
+      {groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']},
+    ],
     'import/prefer-default-export': 0, // has false positives
 
     // mocha
@@ -121,7 +134,11 @@ module.exports = {
     // flowtype
     'flowtype/define-flow-type': 2,
     'flowtype/require-parameter-type': [2, {excludeArrowFunctions: 'expressionsOnly'}],
-    'flowtype/require-return-type': [2, 'always', {excludeArrowFunctions: 'expressionsOnly', annotateUndefined: 'always'}],
+    'flowtype/require-return-type': [
+      2,
+      'always',
+      {excludeArrowFunctions: 'expressionsOnly', annotateUndefined: 'always'},
+    ],
     'flowtype/require-valid-file-annotation': [2, 'always'],
     'flowtype/space-after-type-colon': [2, 'always'],
     'flowtype/space-before-type-colon': [2, 'never'],
@@ -130,7 +147,7 @@ module.exports = {
     'flowtype/valid-syntax': 2,
   },
   settings: {
-    'flowtype': {
+    flowtype: {
       onlyFilesWithFlowAnnotation: false,
     },
     'import/resolver': {
@@ -148,32 +165,27 @@ module.exports = {
           '.less',
           '.css',
           '.svg',
-        ],
-        moduleDirectory: [
-          'node_modules',
-          'packages',
-          'services',
-          'tests',
-        ],
-        paths: [
-          // Only allow absolute from repo root
-          path.resolve(__dirname, '../../../'),
+          // prettier-disable
         ],
       },
     },
   },
+
   globals: {
-    'after': false,
-    'afterEach': false,
-    'assert': false,
-    'before': false,
-    'beforeEach': false,
-    'describe': false,
-    'expect': false,
-    'fbq': false, // facebook pixel
-    'ga': false, // google analytics
-    'it': false,
-    'window': false,
-    'navigator': false,
+    after: false,
+    afterAll: false,
+    afterEach: false,
+    assert: false,
+    before: false,
+    beforeAll: false,
+    beforeEach: false,
+    describe: false,
+    expect: false,
+    fbq: false, // facebook pixel
+    ga: false, // google analytics
+    it: false,
+    jest: false,
+    navigator: false,
+    window: false,
   },
 };
