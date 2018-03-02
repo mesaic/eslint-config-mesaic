@@ -48,7 +48,6 @@ module.exports = {
     'generator-star-spacing': 0, // has bug, disable for now
     'guard-for-in': 0,
     'id-length': 0,
-    'jsx-quotes': [2, 'prefer-single'],
     'max-len': 0,
     'new-cap': 0,
     'no-await-in-loop': 0,
