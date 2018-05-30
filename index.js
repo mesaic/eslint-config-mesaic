@@ -3,38 +3,24 @@ const path = require('path');
 
 var reactSortCompConfig = {
   order: [
-    'type-annotations',
-    'lifecycle',
+    'type-annotations', // default group
+    'instance-variables', // default group
+    'displayName',
+    'fromStores',
+    'props',
+    'propTypes',
+    'defaultProps',
+    'state',
+    'context',
+    'contextTypes',
+    'childContextTypes',
+    'getChildContext',
+    'onEnter',
+    'onChange',
+    'lifecycle', // default group
     'render',
-    '/^_render.+$/',
-    '/^_handle.+$/',
-    'everything-else',
+    'everything-else',// default group
   ],
-  groups: {
-    lifecycle: [
-      'displayName',
-      'props',
-      'propTypes',
-      'state',
-      'defaultProps',
-      'state',
-      'context',
-      'contextTypes',
-      'childContextTypes',
-      'getChildContext',
-      'onEnter',
-      'onChange',
-      'fromStores',
-      'constructor',
-      'componentWillMount',
-      'componentDidMount',
-      'componentWillReceiveProps',
-      'shouldComponentUpdate',
-      'componentWillUpdate',
-      'componentDidUpdate',
-      'componentWillUnmount',
-    ],
-  },
 };
 
 module.exports = {
