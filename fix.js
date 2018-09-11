@@ -4,10 +4,18 @@
 module.exports = {
   parser: 'babel-eslint',
   plugins: ['babel', 'mocha', 'flowtype', 'react'],
+  parserOptions: {
+    ecmaFeatures: {
+      legacyDecorators: true,
+    },
+  },
   rules: {
     'arrow-parens': [2, 'always'],
     'jsx-quotes': [2, 'prefer-single'],
-    'react/jsx-closing-bracket-location': [2, {selfClosing: 'after-props', nonEmpty: 'after-props'}],
+    'react/jsx-closing-bracket-location': [
+      2,
+      {selfClosing: 'after-props', nonEmpty: 'after-props'},
+    ],
     'react/jsx-space-before-closing': [2, 'always'],
   },
-}
+};

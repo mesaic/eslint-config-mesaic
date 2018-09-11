@@ -19,12 +19,17 @@ var reactSortCompConfig = {
     'onChange',
     'lifecycle', // default group
     'render',
-    'everything-else',// default group
+    'everything-else', // default group
   ],
 };
 
 module.exports = {
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      legacyDecorators: true,
+    },
+  },
   plugins: ['babel', 'mocha', 'flowtype'],
   extends: 'airbnb',
   rules: {
@@ -139,8 +144,8 @@ module.exports = {
     'import/resolver': {
       [require.resolve('./import-resolver.js')]: {
         alias: {
-          'api': 'api/src',
-          'e2e': 'e2e/src',
+          api: 'api/src',
+          e2e: 'e2e/src',
         },
         extensions: [
           '.js',
